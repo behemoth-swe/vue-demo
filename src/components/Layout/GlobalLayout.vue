@@ -1,12 +1,14 @@
 <template>
-  <div class="h-12">Hello world</div>
+  <div class="min-h-screen bg-tertiary-800">
+    <slot />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "HomeView",
-  components: {},
+  name: "GlobalLayout",
+  props: {},
 });
 </script>

@@ -1,10 +1,23 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <ThemeProvider>
+    <GlobalLayout>
+      <router-view></router-view>
+    </GlobalLayout>
+  </ThemeProvider>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import ThemeProvider from "@/components/Layout/ThemeProvider.vue";
+import GlobalLayout from "./components/Layout/GlobalLayout.vue";
+
+export default defineComponent({
+  components: {
+    ThemeProvider,
+    GlobalLayout,
+  },
+});
+</script>
 
 <style>
 #app {
